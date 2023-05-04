@@ -1,0 +1,182 @@
+.timetable__header .timetable__item--title,
+.timetable__header .timetable__item--row,
+.timetable__item--title,
+.timetable__item--row,
+.timetable__item--period-num,
+.timetable__item--periods {
+	padding: 12px 18px;
+	line-height: 1.33em;
+	letter-spacing: 1.2px;
+}
+
+.timetable {
+	max-width: 1170px;
+	width: 100%;
+	margin: 50px auto;
+}
+
+.timetable__header,
+.timetable__row,
+.timetable__dayname,
+.timetable__period {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+@media (max-width: 1080px){
+	.timetable__period{
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 900px) {
+	.period {
+		flex-wrap: wrap;
+	}
+	.period > *{
+		flex: 0 1 100%;
+		text-align: center;
+		background-color: #d8f4e6;
+		margin: 10px;
+		padding: 10px;
+	}
+}
+
+.timetable__dayname{
+	font-size: 1rem;
+	padding: 10px 20px;
+	background-color: #365edc;
+	border: 1px solid #234AC7;
+	border-radius: 10px;
+	color: #ffffff;
+	transition: .3s all;
+}
+
+.timetable__dayname:hover{
+	background-color: #234AC7;
+	padding: 10px 30px;
+}
+
+/* @media screen and (max-width: 780px) {
+
+	.timetable__header,
+	.timetable__row,
+	.timetable__dayname,
+	.timetable__period {
+		flex-wrap: wrap;
+	} 
+}*/
+
+.period__time,
+.period__disciple,
+.period__teacher,
+.period__lecturehall {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.timetable--group {
+	background-color: #ffffff;
+}
+
+/* @media screen and (max-width: 780px) {
+	.timetable__header .timetable__item--title {
+		display: none;
+	} */
+
+
+/* @media screen and (max-width: 780px) {
+	.timetable__item--title {
+		width: 100%;
+		min-height: 30px;
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+
+	.timetable__item--row {
+		flex: 1;
+	}
+} */
+
+.timetable__item--period-num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #365edc;
+	font-weight: bold;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.1rem;
+	flex: 3 1 10%;
+}
+
+.timetable__item--periods {
+	width: 100%;
+	padding: 0 20px;
+}
+
+.period{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.period:not(:last-child) {
+	border-bottom: 1px solid #365edc;
+	
+}
+
+.period > *{
+	flex: 0 1 100%;
+}
+
+.period > *:not(:nth-child(even)){
+	text-align: center;
+}
+
+.period__disciple{
+	font-weight: bold;
+}
+
+.timetable__period{
+	padding: 10px;
+	border-bottom: 3px solid #365edc;
+	margin: 0;
+}
+
+/* @media (max-width: 991px) {
+	.period {
+		display: block;
+	}
+
+	.period span {
+		display: block;
+		margin-bottom: 5px;
+	}
+} */
+
+/* .form-inline {
+	border: 1px solid #16683f;
+	padding: 20px 20px;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	background: #16683f;
+}
+
+@media screen and (max-width: 991px) {
+	.form-group {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.form-group .control-label {
+		width: 45px;
+		display: inline-block;
+	}
+}  */
