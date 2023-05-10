@@ -15,10 +15,21 @@
 	margin: 50px auto;
 }
 
+
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+
 .timetable__header,
 .timetable__row,
 .timetable__dayname,
-.timetable__period {
+.timetable__period,
+.timetable__arrow {
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
@@ -44,20 +55,27 @@
 	}
 }
 
-.timetable__dayname{
-	font-size: 1rem;
+.accordion{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: 10px 20px;
 	background-color: #365edc;
 	border: 1px solid #234AC7;
-	border-radius: 10px;
-	color: #ffffff;
 	transition: .3s all;
+	border-radius: 10px;
 }
 
-.timetable__dayname:hover{
+.accordion:hover{
 	background-color: #234AC7;
-	padding: 10px 30px;
+	padding: 13px 30px;
 }
+
+.timetable__dayname{
+	font-size: 1rem;
+	color: #ffffff;
+}
+
 
 /* @media screen and (max-width: 780px) {
 
@@ -68,6 +86,19 @@
 		flex-wrap: wrap;
 	} 
 }*/
+
+
+.timetable__arrow{
+	display: block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(130deg);
+	border: 1px solid white;
+	border-bottom: none;
+	border-left: none;
+}
+
+
 
 .period__time,
 .period__disciple,

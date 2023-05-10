@@ -12,19 +12,16 @@
 	
 
 
-	.panel {
-		padding: 0 18px;
-		background-color: white;
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.2s ease-out;
-	}
+
 </style>
 </head>
 
 <body>
 	<div class="timetable timetable--group">
-		<h4 class="timetable__dayname accordion">Вторник (02.05.2023)</h4>
+		<div class="accordion">
+			<h1 class="timetable__dayname">Вторник (02.05.2023)</h1>
+			<span class="timetable__arrow"> </span>
+		</div>
 		<div class="panel">
 			<ul class="timetable__period">
 				<li class="timetable__item--period-num">1 пара</li>
@@ -43,77 +40,21 @@
 					</div>
 				</li>
 			</ul>
-
-			<ul class="timetable__period">
-				<li class="timetable__item--period-num">1 пара</li>
-				<li class="timetable__item--periods">
-					<div class="period">
-						<span class="period__time">08.00-08.45</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-					<div class="period">
-						<span class="period__time">09.05-09.50</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-				</li>
-			</ul>
-
-			<ul class="timetable__period">
-				<li class="timetable__item--period-num">1 пара</li>
-				<li class="timetable__item--periods">
-					<div class="period">
-						<span class="period__time">08.00-08.45</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-					<div class="period">
-						<span class="period__time">09.05-09.50</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-				</li>
-			</ul>
-
-			<ul class="timetable__period">
-				<li class="timetable__item--period-num">1 пара</li>
-				<li class="timetable__item--periods">
-					<div class="period">
-						<span class="period__time">08.00-08.45</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-					<div class="period">
-						<span class="period__time">09.05-09.50</span>
-						<span class="period__disciple">Планирование карьеры</span>
-						<span class="period__teacher">Степанов Вадим Александрович</span>
-						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
-					</div>
-				</li>
-			</ul>
 		</div>
-	</div>
-
 	<script>
-		let acc = document.getElementsByClassName("accordion");
-
-		for (let i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
+		let arrow = document.querySelector(".timetable__arrow");
+		document.querySelectorAll('.accordion').forEach((item)=> {
+			item.addEventListener("click", function () {
+				let panel = this.nextElementSibling;
 				if (panel.style.maxHeight) {
 					panel.style.maxHeight = null;
 				} else {
 					panel.style.maxHeight = panel.scrollHeight + "px";
+					arrow.classList.remove = "timetable__arrow";
+					console.log('sd')
 				}
-			});
-		}
+			})
+		})
 	</script>
 
 
